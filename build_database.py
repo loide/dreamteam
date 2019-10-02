@@ -1,5 +1,6 @@
 import os
 from config import db
+from config import LOCAL_DATABASE
 from models import Person
 
 # Data to initialize database with
@@ -10,15 +11,18 @@ PEOPLE = [
 ]
 
 # Delete database file if it exists currently
-if os.path.exists("people.db"):
+if LOCAL_DATABASE and os.path.exists("people.db"):
     os.remove("people.db")
 
 # Create the database
-db.create_all()
+try:
+    db.create_all()
 
-# iterate over the PEOPLE structure and populate the database
-for person in PEOPLE:
-    p = Person(lname=person.get("lname"), fname=person.get("fname"))
-    db.session.add(p)
+    # iterate over the PEOPLE structure and populate the database
+    for person in PEOPLE:
+        p = Person(lname=person.get("lname"), fname=person.get("fname"))
+        db.session.add(p)
 
-db.session.commit()
+    db.session.commit()
+except Exception as e:
+    print(e)
