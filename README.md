@@ -24,7 +24,6 @@ Simple API to execute CRUD operations.
 
    Build the docker image and run exposing the port 5000:
    ```
-   $ cd src
    $ docker build -t="apiserver" .
    $ docker run -p 5000:5000 apiserver
    ```
