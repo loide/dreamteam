@@ -5,3 +5,10 @@ db = {
     "rds_port" : "5432",
     "rds_dbname" : "AWS_RDS_DBNAME"
 }
+
+# Data to initialize database with
+people_data = [
+    {"fname": "Doug", "lname": "Farrell"},
+    {"fname": "Kent", "lname": "Brockman"},
+    {"fname": "Bunny", "lname": "Easter"},
+]
