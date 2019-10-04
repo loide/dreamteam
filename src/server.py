@@ -4,10 +4,9 @@
 Main module of the server file
 """
 
-# 3rd party moudles
-from flask import render_template
 import connexion
 from config import connex_app as app
+from params import cfg
 
 
 # Read the swagger.yml file to configure the endpoints
@@ -21,4 +20,5 @@ def home():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.debug = cfg['debug']
+    app.run(host=cfg['host'], port=cfg['port'])

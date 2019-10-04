@@ -6,15 +6,13 @@ import  params
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-LOCAL_DATABASE = True
-
 # Create the connexion application instance
 connex_app = connexion.App(__name__, specification_dir=basedir)
 
 # Get the underlying Flask app instance
 app = connex_app.app
 
-if LOCAL_DATABASE:
+if params.cfg['local_database']:
     # Build the local Sqlite ULR for SqlAlchemy
     db_url = "sqlite:////" + os.path.join(basedir, "people.db")
 else:

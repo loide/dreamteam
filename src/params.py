@@ -1,3 +1,10 @@
+cfg = {
+    "local_database": True,
+    "host": "0.0.0.0",
+    "port": 443,
+    "debug": True,
+}
+
 db = {
     "rds_user" : "AWS_RDS_USER",
     "rds_passwd" : "AWS_RDS_PASSWD",
