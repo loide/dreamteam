@@ -14,8 +14,11 @@ Simple API to execute CRUD operations.
    $ cd src
    $ pip3 install -r requirements.txt
    ```
-   Execute the api server:
+   Create the database and execute the api server:
+   ```
+   $./build_database.py
    $./server.py
+   ```
 
 * Running in a docker container:
 
