@@ -23,7 +23,7 @@ def home():
     localhost:5000/
     :return:        the rendered template "home.html"
     """
-    return render_template("home.html")
+    return "Server up and running."
 
 
 if __name__ == "__main__":
