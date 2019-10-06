@@ -21,4 +21,4 @@ def home():
 
 if __name__ == "__main__":
     app.debug = cfg['debug']
-    app.run(host=cfg['host'], port=cfg['port'])
+    app.run(host=cfg['host'], port=cfg['port'], ssl_context=cfg['ssl_context'])

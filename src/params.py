@@ -3,6 +3,7 @@ cfg = {
     "host": "0.0.0.0",
     "port": 443,
     "debug": True,
+    "ssl_context": "adhoc"
 }
 
 db = {
