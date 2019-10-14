@@ -2,12 +2,11 @@
 
 import os
 from config import db
-from config import LOCAL_DATABASE
 from models import Person
 import params
 
 # Delete database file if it exists currently
-if LOCAL_DATABASE and os.path.exists("people.db"):
+if params.cfg['local_database'] and os.path.exists("people.db"):
     print("Remove existent database people.db")
     os.remove("people.db")
 
