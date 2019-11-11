@@ -30,6 +30,6 @@ Simple API to execute CRUD operations.
 
 # Testing
 
-   Go to http://127.0.0.1/api/ui to interact with the RESTful api:
+   Go to https://127.0.0.1/api/ui to interact with the RESTful api:
 
    ![Screenshot](https://github.com/loide/loide.github.io/blob/master/images/dreateam_api.png?raw=true)
